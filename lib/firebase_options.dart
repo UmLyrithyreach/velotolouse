@@ -41,48 +41,48 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB57DAOccwmiDjH5hg-eVQ9m67HbrYRZS0',
-    appId: '1:177925156640:web:cd871949d64c9c841af145',
-    messagingSenderId: '177925156640',
-    projectId: 'velotolouse-60964',
-    authDomain: 'velotolouse-60964.firebaseapp.com',
-    storageBucket: 'velotolouse-60964.firebasestorage.app',
-    measurementId: 'G-LVCXEZV6BB',
+    apiKey: String.fromEnvironment('FIREBASE_WEB_API_KEY'),
+    appId: String.fromEnvironment('FIREBASE_WEB_APP_ID'),
+    messagingSenderId: String.fromEnvironment('FIREBASE_MESSAGING_SENDER_ID'),
+    projectId: String.fromEnvironment('FIREBASE_PROJECT_ID'),
+    authDomain: String.fromEnvironment('FIREBASE_AUTH_DOMAIN'),
+    storageBucket: String.fromEnvironment('FIREBASE_STORAGE_BUCKET'),
+    measurementId: String.fromEnvironment('FIREBASE_WEB_MEASUREMENT_ID'),
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDuI9VJKFYQ-f1LWri0ec4W5FC5H2mFe7I',
-    appId: '1:177925156640:android:85c0252eb4a1ed961af145',
-    messagingSenderId: '177925156640',
-    projectId: 'velotolouse-60964',
-    storageBucket: 'velotolouse-60964.firebasestorage.app',
+    apiKey: String.fromEnvironment('FIREBASE_ANDROID_API_KEY'),
+    appId: String.fromEnvironment('FIREBASE_ANDROID_APP_ID'),
+    messagingSenderId: String.fromEnvironment('FIREBASE_MESSAGING_SENDER_ID'),
+    projectId: String.fromEnvironment('FIREBASE_PROJECT_ID'),
+    storageBucket: String.fromEnvironment('FIREBASE_STORAGE_BUCKET'),
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyArOAFhOjT2woeQ_SfYykw-_GrGLqkCpcA',
-    appId: '1:177925156640:ios:443ed5418d367f981af145',
-    messagingSenderId: '177925156640',
-    projectId: 'velotolouse-60964',
-    storageBucket: 'velotolouse-60964.firebasestorage.app',
+    apiKey: String.fromEnvironment('FIREBASE_IOS_API_KEY'),
+    appId: String.fromEnvironment('FIREBASE_IOS_APP_ID'),
+    messagingSenderId: String.fromEnvironment('FIREBASE_MESSAGING_SENDER_ID'),
+    projectId: String.fromEnvironment('FIREBASE_PROJECT_ID'),
+    storageBucket: String.fromEnvironment('FIREBASE_STORAGE_BUCKET'),
     iosBundleId: 'com.example.velotolouse',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyArOAFhOjT2woeQ_SfYykw-_GrGLqkCpcA',
-    appId: '1:177925156640:ios:443ed5418d367f981af145',
-    messagingSenderId: '177925156640',
-    projectId: 'velotolouse-60964',
-    storageBucket: 'velotolouse-60964.firebasestorage.app',
+    apiKey: String.fromEnvironment('FIREBASE_IOS_API_KEY'),
+    appId: String.fromEnvironment('FIREBASE_IOS_APP_ID'),
+    messagingSenderId: String.fromEnvironment('FIREBASE_MESSAGING_SENDER_ID'),
+    projectId: String.fromEnvironment('FIREBASE_PROJECT_ID'),
+    storageBucket: String.fromEnvironment('FIREBASE_STORAGE_BUCKET'),
     iosBundleId: 'com.example.velotolouse',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyB57DAOccwmiDjH5hg-eVQ9m67HbrYRZS0',
-    appId: '1:177925156640:web:c60b463436a940301af145',
-    messagingSenderId: '177925156640',
-    projectId: 'velotolouse-60964',
-    authDomain: 'velotolouse-60964.firebaseapp.com',
-    storageBucket: 'velotolouse-60964.firebasestorage.app',
-    measurementId: 'G-XLXXBH1QDX',
+    apiKey: String.fromEnvironment('FIREBASE_WEB_API_KEY'),
+    appId: String.fromEnvironment('FIREBASE_WINDOWS_APP_ID'),
+    messagingSenderId: String.fromEnvironment('FIREBASE_MESSAGING_SENDER_ID'),
+    projectId: String.fromEnvironment('FIREBASE_PROJECT_ID'),
+    authDomain: String.fromEnvironment('FIREBASE_AUTH_DOMAIN'),
+    storageBucket: String.fromEnvironment('FIREBASE_STORAGE_BUCKET'),
+    measurementId: String.fromEnvironment('FIREBASE_WINDOWS_MEASUREMENT_ID'),
   );
 }
