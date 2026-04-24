@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177925156640",
+    "project_id": "velotolouse-60964",
+    "storage_bucket": "velotolouse-60964.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177925156640:android:85c0252eb4a1ed961af145",
+        "android_client_info": {
+          "package_name": "com.example.velotolouse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuI9VJKFYQ-f1LWri0ec4W5FC5H2mFe7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
