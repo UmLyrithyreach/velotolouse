@@ -1,7 +1,7 @@
 class Trip {
-  int id;
-  int userId;
-  int bikeId;
+  String id;
+  String userId;
+  String bikeId;
   DateTime startTime;
   DateTime endTime;
   double price;
