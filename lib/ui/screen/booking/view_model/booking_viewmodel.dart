@@ -214,29 +214,33 @@ class BookingViewModel extends ChangeNotifier {
         return null;
       }
 
-      // Calculate distance
-      double distanceKm = 0;
-      try {
-        final currentPosition = await Geolocator.getCurrentPosition(
-          locationSettings: const LocationSettings(
-            accuracy: LocationAccuracy.high,
-          ),
-        );
+      // Calculate distance - use the simulated distance for desktop testing
+      double distanceKm = currentDistanceKm; // Use the simulated distance
+      
+      // Only try GPS if simulated distance is 0 (shouldn't happen in normal flow)
+      if (distanceKm == 0) {
+        try {
+          final currentPosition = await Geolocator.getCurrentPosition(
+            locationSettings: const LocationSettings(
+              accuracy: LocationAccuracy.high,
+            ),
+          );
 
-        final distanceMeters = Geolocator.distanceBetween(
-          bike.latitude,
-          bike.longitude,
-          currentPosition.latitude,
-          currentPosition.longitude,
-        );
-        distanceKm = distanceMeters / 1000;
-      } catch (_) {
-        // Fallback to time-based calculation
-        final durationMinutes = DateTime.now()
-            .difference(trip.startTime)
-            .inMinutes
-            .toDouble();
-        distanceKm = (durationMinutes / 60) * 15;
+          final distanceMeters = Geolocator.distanceBetween(
+            bike.latitude,
+            bike.longitude,
+            currentPosition.latitude,
+            currentPosition.longitude,
+          );
+          distanceKm = distanceMeters / 1000;
+        } catch (_) {
+          // Fallback to time-based calculation
+          final durationMinutes = DateTime.now()
+              .difference(trip.startTime)
+              .inMinutes
+              .toDouble();
+          distanceKm = (durationMinutes / 60) * 15;
+        }
       }
 
       final totalPrice = distanceKm * PriceConstant.pricePerKm;

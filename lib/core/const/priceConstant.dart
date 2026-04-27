@@ -1,3 +1,3 @@
 class PriceConstant {
-  static const double pricePerKm = 0.25;
+  static const double pricePerKm = 100;
 }
